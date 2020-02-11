@@ -45,11 +45,11 @@ struct Automaton {
 int main(int argc, char* argv[]) {
 
   Automaton automaton;
-  std::string in_file_handle = "./input1.dat";
+  std::string in_file_handle = argv[ 1 ];
   std::vector<std::string> split_str;
   std::ostream_iterator<std::string> screen( std::cout, " " );
 
-  parse_file(in_file_handle);
+  parse_file( in_file_handle );
 //  std::copy( split_str.begin(), split_str.end(), screen );
 //  for ( auto i : split_str ) std::cout << i << std::endl;
 //  parse_file(in_file);
@@ -74,13 +74,20 @@ void parse_file(std::string file) {
   if ( !in_file ) {
     std::cerr << "Failure in opening file." << "\n"
               << "Halting with exit code 1." << "\n";
-    exit( 1 ); }
+    exit( 1 );
+  }
+
+  std::cout << std::boolalpha;
 
   getline( in_file, data );
   data_vector = split( data, '\t' );
+
+  std::cout << std::any_of( data_vector.begin(), data_vector.end(), [](std::string s) { return s == "applesauce"; } )
+            << "\n";
+
   for ( auto i : data_vector ) std::cout << i << std::endl;
-//
-//  std::regex_search(data, start_match, start_regex);
+
+  //  std::regex_search(data, start_match, start_regex);
 //  for (int i = 0; i <= start_match.size(); i++){
 //    std::cout << start_match[i] << "\n";
 //  }
