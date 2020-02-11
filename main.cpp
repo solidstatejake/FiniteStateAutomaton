@@ -12,11 +12,11 @@
 #include <regex>
 #include <string>
 
-std::vector<std::string> split(std::string original_str, char delim);
+std::vector<std::string> split(std::string original_str, const char &delim);
 
-std::vector<std::string> split(std::string original_str, char delim, std::vector<std::string> &split_string);
+std::vector<std::string> split(std::string original_str, const char &delim, std::vector<std::string> &split_string);
 
-void parse_file(std::string file);
+void parse_file(const std::string &file_name, std::vector<std::vector<std::string>> &data_vector);
 
 struct State {
     bool is_accept = false;
@@ -45,31 +45,44 @@ struct Automaton {
 int main(int argc, char* argv[]) {
 
   Automaton automaton;
-  std::string in_file_handle = argv[ 1 ];
+  const std::string in_file_handle = argv[ 1 ];
   std::vector<std::string> split_str;
+  std::vector<std::vector<std::string>> data_vector;
   std::ostream_iterator<std::string> screen( std::cout, " " );
 
-  parse_file( in_file_handle );
-//  std::copy( split_str.begin(), split_str.end(), screen );
-//  for ( auto i : split_str ) std::cout << i << std::endl;
-//  parse_file(in_file);
-//  std::cout << std::string::npos << std::endl;
-  // TODO: Need to change 'input1.dat' to the argv[1]; the name of the file that Garrison will provide.
+  //TODO change 3 to 2 when finished.
+  if ( argc != 2 ) {
+    std::cerr << "Error:\t Three arguments were not detected." << "\n"
+              << "Usage:\t this_file_name\t automaton_specs.txt\tautomaton_config_string" << "\n"
+              << "Halting with exit code 1." << "\n";
+
+    return 1;
+  }
+
+  parse_file( in_file_handle, data_vector );
+
+  for ( auto split_string : data_vector ) {
+    for ( auto word : split_string ) {
+      std::cout << word << "\n";
+    }
+  }
+
 
   return 0;
 }
 
+/*
+ * Description: Read input file, line by line to parse definition of finite automaton. Store each line as a split string
+ *              in a vector split_string, and then store split_string within data_vector.
+ * Parameters:
+ *    @std::string original_str               : The string to be split.
+ *    @char delim                             : The delimiter along which to split string.
+ */
+void parse_file(const std::string &file_name, std::vector<std::vector<std::string>> &data_vector) {
 
-void parse_file(std::string file) {
-
-  std::ifstream in_file{ file };
+  std::ifstream in_file{ file_name };
   std::string data;
-  std::vector<std::string> data_vector( 1 );
-  std::regex state_regex( "state" );
-  std::regex start_regex( "start" );
-  std::regex accept_regex( "accept" );
-  std::regex start_accept_regex( "(accept|start){1,2}" );
-  std::smatch start_match, accept_match, start_accept_match;
+  std::vector<std::string> split_string;
 
   if ( !in_file ) {
     std::cerr << "Failure in opening file." << "\n"
@@ -77,32 +90,10 @@ void parse_file(std::string file) {
     exit( 1 );
   }
 
-  std::cout << std::boolalpha;
-
-  getline( in_file, data );
-  data_vector = split( data, '\t' );
-
-  std::cout << std::any_of( data_vector.begin(), data_vector.end(), [](std::string s) { return s == "applesauce"; } )
-            << "\n";
-
-  for ( auto i : data_vector ) std::cout << i << std::endl;
-
-  //  std::regex_search(data, start_match, start_regex);
-//  for (int i = 0; i <= start_match.size(); i++){
-//    std::cout << start_match[i] << "\n";
-//  }
-
-
-//  std::cout << std::boolalpha;
-//
-//  std::cout << "\n" << data << "\n\n";
-//
-//  std::cout <<"Were there any matches?" << "\n" << start_match.ready() << "\n\n";
-//
-//  std::cout << "How many matches were there?" << "\n" << start_match.size() << "\n\n";
-//
-//  std::cout << "What were the matches?" << "\n";
-
+  while ( !in_file.eof() ) {
+    getline( in_file, data );
+    data_vector.push_back( split( data, '\t' ) );
+  }
 
   in_file.close();
 }
@@ -113,8 +104,7 @@ void parse_file(std::string file) {
  *    @std::string original_str               : The string to be split.
  *    @char delim                             : The delimiter along which to split string.
  */
-std::vector<std::string>
-split(std::string original_str, char delim) {
+std::vector<std::string> split(std::string original_str, const char &delim) {
   std::vector<std::string> split_string;
   std::string spliced_string = original_str;
 
@@ -136,8 +126,7 @@ split(std::string original_str, char delim) {
  *    @char delim                             : The delimiter along which to split string.
  *    @std::vector<std::string> &split_string : A reference to a vector which will contain the split string.
  */
-std::vector<std::string>
-split(std::string original_str, char delim, std::vector<std::string> &split_string) {
+std::vector<std::string> split(std::string original_str, const char &delim, std::vector<std::string> &split_string) {
   std::string spliced_string = original_str;
 
   if ( original_str.find_first_of( delim ) == std::string::npos ) {
@@ -148,31 +137,4 @@ split(std::string original_str, char delim, std::vector<std::string> &split_stri
     spliced_string = original_str.erase( 0, original_str.find_first_of( delim ) + 1 );
   }
   return split( spliced_string, delim, split_string );
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  if (argc != 3) {
-//    std::cerr << "Error:\t Three arguments were not detected." << "\n"
-//              << "Usage:\t this_file_name\t automaton_specs.txt\tautomaton_config_string" << "\n"
-//              << "Halting with exit code 1." << "\n";
-//
-//    return 1;
-//  }

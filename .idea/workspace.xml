@@ -34,17 +34,17 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="13" />
+            <state relative-caret-position="552">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
               <folding>
                 <element signature="e#317#336#0" expanded="true" />
                 <element signature="e#87#175#1" />
                 <element signature="e#178#265#1" />
                 <element signature="e#268#621#1" />
-                <marker date="1581433501245" expanded="true" signature="2124:2247" ph="..." />
-                <marker date="1581433501245" expanded="false" signature="2126:2247" ph="..." />
-                <marker date="1581433501245" expanded="true" signature="2131:2247" ph="..." />
-                <marker date="1581433501245" expanded="true" signature="2132:2247" ph="..." />
+                <element signature="e#3699#4244#0" />
+                <marker date="1581435566740" expanded="false" signature="1580:1814" ph="..." />
+                <marker date="1581435566740" expanded="true" signature="2227:2350" ph="..." />
+                <marker date="1581435566740" expanded="false" signature="2229:2350" ph="..." />
               </folding>
             </state>
           </provider>
@@ -144,12 +144,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581379177886</updated>
-      <workItem from="1581379179632" duration="15775000" />
+      <workItem from="1581379179632" duration="17665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15775000" />
+    <option name="totallyTimeSpent" value="17665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -213,17 +213,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="13" />
+        <state relative-caret-position="552">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="e#317#336#0" expanded="true" />
             <element signature="e#87#175#1" />
             <element signature="e#178#265#1" />
             <element signature="e#268#621#1" />
-            <marker date="1581433501245" expanded="true" signature="2124:2247" ph="..." />
-            <marker date="1581433501245" expanded="false" signature="2126:2247" ph="..." />
-            <marker date="1581433501245" expanded="true" signature="2131:2247" ph="..." />
-            <marker date="1581433501245" expanded="true" signature="2132:2247" ph="..." />
+            <element signature="e#3699#4244#0" />
+            <marker date="1581435566740" expanded="false" signature="1580:1814" ph="..." />
+            <marker date="1581435566740" expanded="true" signature="2227:2350" ph="..." />
+            <marker date="1581435566740" expanded="false" signature="2229:2350" ph="..." />
           </folding>
         </state>
       </provider>
