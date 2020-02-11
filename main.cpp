@@ -12,6 +12,14 @@
 #include <regex>
 #include <string>
 
+static constexpr char ALPHABET[] =
+        { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+          'v', 'w', 'x', 'y', 'z',
+          '0', '9', '8', '7', '6', '5', '4', '3', '2', '1' };
+
+constexpr std::ostream_iterator<std::string> COUT( std::cout, " " );
+
+
 std::vector<std::string> split(std::string original_str, const char &delim);
 
 std::vector<std::string> split(std::string original_str, const char &delim, std::vector<std::string> &split_string);
@@ -31,14 +39,10 @@ struct Transition {
 };
 
 struct Automaton {
+    State start_state;
+    std::vector<State> end_states;
     std::vector<State> states;
-    static constexpr char alphabet[] =
-            { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-              'v', 'w', 'x', 'y', 'z',
-              '0', '9', '8', '7', '6', '5', '4', '3', '2', '1' };
     std::vector<Transition> transitions;
-
-
 };
 
 
@@ -60,12 +64,12 @@ int main(int argc, char* argv[]) {
   }
 
   parse_file( in_file_handle, data_vector );
-
-  for ( auto split_string : data_vector ) {
-    for ( auto word : split_string ) {
-      std::cout << word << "\n";
-    }
-  }
+//
+//  for ( auto split_string : data_vector ) {
+//    for (const auto &word : split_string ) {
+//      std::cout << word << "\n";
+//    }
+//  }
 
 
   return 0;
@@ -91,8 +95,8 @@ void parse_file(const std::string &file_name, std::vector<std::vector<std::strin
   }
 
   while ( !in_file.eof() ) {
-    getline( in_file, data );
-    data_vector.push_back( split( data, '\t' ) );
+    getline( in_file, data, ' ' );
+    data_vector.push_back( split( data, '~') );
   }
 
   in_file.close();
@@ -137,4 +141,34 @@ std::vector<std::string> split(std::string original_str, const char &delim, std:
     spliced_string = original_str.erase( 0, original_str.find_first_of( delim ) + 1 );
   }
   return split( spliced_string, delim, split_string );
+}
+
+/*
+ * Description: Using data from input file create the desired automaton by specifying states and transitions.
+ * Parameters:
+ *    @Automaton &automaton                               : A reference to the automaton in main().
+ *    @std::vector<std::vector<std::string>> &data_vector : The vector containing the parsed data file (containing the
+ *                                                          specifications of the automaton).
+ */
+void create_automaton(Automaton &automaton, std::vector<std::vector<std::string>> &data_vector){
+  std::vector<std::string> split_line;
+
+  for ( auto line : data_vector ) {
+    for (const auto &word : line ) {
+
+      split_line = split(word, ' ');
+
+      for(const auto &i : split_line) std::cout << i << "\n";
+
+      if(word == "state"){
+
+
+      }else if (word == "transition"){
+
+
+      }
+
+    }
+  }
+
 }
