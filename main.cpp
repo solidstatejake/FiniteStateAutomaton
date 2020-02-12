@@ -17,14 +17,8 @@ static constexpr char ALPHABET[] =
           'v', 'w', 'x', 'y', 'z',
           '0', '9', '8', '7', '6', '5', '4', '3', '2', '1' };
 
-constexpr std::ostream_iterator<std::string> COUT( std::cout, " " );
+const std::ostream_iterator<std::string> COUT( std::cout, "\n" );
 
-
-std::vector<std::string> split(std::string original_str, const char &delim);
-
-std::vector<std::string> split(std::string original_str, const char &delim, std::vector<std::string> &split_string);
-
-void parse_file(const std::string &file_name, std::vector<std::vector<std::string>> &data_vector);
 
 struct State {
     bool is_accept = false;
@@ -33,7 +27,7 @@ struct State {
 };
 
 struct Transition {
-    char symbol = ' ';
+    std::string symbol;
     State begin_state;
     State end_state;
 };
@@ -45,13 +39,22 @@ struct Automaton {
     std::vector<Transition> transitions;
 };
 
+std::vector<std::string> split(const std::string original_str, const char &delim);
+
+std::vector<std::string>
+split(const std::string original_str, const char &delim, std::vector<std::string> &split_string);
+
+void parse_file(const std::string &file_name, std::vector<std::string> &data_vector);
+
+void create_automaton(Automaton &automaton, std::vector<std::string> &data_vector);
+
 
 int main(int argc, char* argv[]) {
 
   Automaton automaton;
   const std::string in_file_handle = argv[ 1 ];
   std::vector<std::string> split_str;
-  std::vector<std::vector<std::string>> data_vector;
+  std::vector<std::string> data_vector;
   std::ostream_iterator<std::string> screen( std::cout, " " );
 
   //TODO change 3 to 2 when finished.
@@ -64,6 +67,8 @@ int main(int argc, char* argv[]) {
   }
 
   parse_file( in_file_handle, data_vector );
+
+  create_automaton( automaton, data_vector );
 //
 //  for ( auto split_string : data_vector ) {
 //    for (const auto &word : split_string ) {
@@ -82,7 +87,7 @@ int main(int argc, char* argv[]) {
  *    @std::string original_str               : The string to be split.
  *    @char delim                             : The delimiter along which to split string.
  */
-void parse_file(const std::string &file_name, std::vector<std::vector<std::string>> &data_vector) {
+void parse_file(const std::string &file_name, std::vector<std::string> &data_vector) {
 
   std::ifstream in_file{ file_name };
   std::string data;
@@ -94,9 +99,10 @@ void parse_file(const std::string &file_name, std::vector<std::vector<std::strin
     exit( 1 );
   }
 
+  //Data is coming in line by line.
   while ( !in_file.eof() ) {
-    getline( in_file, data, ' ' );
-    data_vector.push_back( split( data, '~') );
+    getline( in_file, data );
+    data_vector.push_back( data );
   }
 
   in_file.close();
@@ -108,7 +114,7 @@ void parse_file(const std::string &file_name, std::vector<std::vector<std::strin
  *    @std::string original_str               : The string to be split.
  *    @char delim                             : The delimiter along which to split string.
  */
-std::vector<std::string> split(std::string original_str, const char &delim) {
+std::vector<std::string> split(const std::string original_str, const char &delim) {
   std::vector<std::string> split_string;
   std::string spliced_string = original_str;
 
@@ -117,7 +123,7 @@ std::vector<std::string> split(std::string original_str, const char &delim) {
     return split_string;
   } else {
     split_string.push_back( original_str.substr( 0, original_str.find_first_of( delim ) ) );
-    spliced_string = original_str.erase( 0, original_str.find_first_of( delim ) + 1 );
+    spliced_string.erase( 0, original_str.find_first_of( delim ) + 1 );
   }
   return split( spliced_string, delim, split_string );
 
@@ -130,7 +136,8 @@ std::vector<std::string> split(std::string original_str, const char &delim) {
  *    @char delim                             : The delimiter along which to split string.
  *    @std::vector<std::string> &split_string : A reference to a vector which will contain the split string.
  */
-std::vector<std::string> split(std::string original_str, const char &delim, std::vector<std::string> &split_string) {
+std::vector<std::string>
+split(const std::string original_str, const char &delim, std::vector<std::string> &split_string) {
   std::string spliced_string = original_str;
 
   if ( original_str.find_first_of( delim ) == std::string::npos ) {
@@ -138,7 +145,7 @@ std::vector<std::string> split(std::string original_str, const char &delim, std:
     return split_string;
   } else {
     split_string.push_back( original_str.substr( 0, original_str.find_first_of( delim ) ) );
-    spliced_string = original_str.erase( 0, original_str.find_first_of( delim ) + 1 );
+    spliced_string.erase( 0, original_str.find_first_of( delim ) + 1 );
   }
   return split( spliced_string, delim, split_string );
 }
@@ -150,25 +157,89 @@ std::vector<std::string> split(std::string original_str, const char &delim, std:
  *    @std::vector<std::vector<std::string>> &data_vector : The vector containing the parsed data file (containing the
  *                                                          specifications of the automaton).
  */
-void create_automaton(Automaton &automaton, std::vector<std::vector<std::string>> &data_vector){
+void create_automaton(Automaton &automaton, std::vector<std::string> &data_vector) {
+  std::regex state_pattern{ "state" },
+          transition_pattern{ "transition" },
+          transition_function_pattern{ R"(\d\t\w\t\d)" },
+          id_pattern{ "[[:digit:]]+" },
+          start_pattern{ "start" },
+          accept_pattern{ "accept" },
+          start_and_accept_pattern{ R"((start\taccept)|(accept\tstart))" };
+
   std::vector<std::string> split_line;
+  std::smatch matches;
 
-  for ( auto line : data_vector ) {
-    for (const auto &word : line ) {
+  for ( const auto &current_line : data_vector ) {
+    split_line = split( current_line, '\t' );
 
-      split_line = split(word, ' ');
+    std::regex_search( current_line, matches, state_pattern );
 
-      for(const auto &i : split_line) std::cout << i << "\n";
+    //Handle state line
+    if ( !matches.empty() ) {
+      State new_state;
+      //find id number
+      std::regex_search( current_line, matches, id_pattern );
+      if ( !matches.empty() ) new_state.id = std::stol( matches.str( 0 ) );
+      //check if start state
+      std::regex_search( current_line, matches, start_pattern );
+      if ( !matches.empty() ) new_state.is_start = true;
+      //check if accept state
+      std::regex_search( current_line, matches, accept_pattern );
+      if ( !matches.empty() ) new_state.is_accept = true;
 
-      if(word == "state"){
+      //Handle appending new_state to automaton.
+      automaton.states.push_back( new_state );
+      if ( new_state.is_start ) automaton.start_state = new_state;
+      if ( new_state.is_accept ) automaton.end_states.push_back( new_state );
+    }//END handle state line
 
+    std::regex_search( current_line, matches, transition_pattern );
 
-      }else if (word == "transition"){
+    //Handle transition line
+    if ( !matches.empty() ) {
+      split_line.erase( split_line.begin() );
 
+      State transition_fn_begin_state, transition_fn_end_state;
+      Transition new_transition;
+      long arg1 = std::stol( split_line[ 0 ] ),
+              arg3 = std::stol( split_line[ 2 ] );
+      std::string arg2 = split_line[ 1 ];
 
+      std::regex_search( current_line, matches, transition_function_pattern );
+      //Determine if either of states in current transition are NOT already registered in the automaton.
+      std::vector<long> state_ids;
+
+      for ( const auto &current_automaton_state : automaton.states )
+        state_ids.push_back( current_automaton_state.id );
+
+      std::sort( state_ids.begin(), state_ids.end() );
+
+      //Create new states (neither start nor accept) where missing.
+      for ( auto current_arg: { arg1, arg3 } ) {
+        if ( !std::binary_search( state_ids.begin(), state_ids.end(), current_arg ) ) {
+          State new_state;
+          new_state.id = current_arg;
+          automaton.states.push_back( new_state );
+        }
+        state_ids.push_back( current_arg ) ;
+        std::sort( state_ids.begin(), state_ids.end() );
       }
 
+      //Done adding states to automaton.
+      //BEGIN transitions.
+
+      transition_fn_begin_state.id = arg1;
+      transition_fn_end_state.id = arg3;
+      new_transition.symbol = arg2;
+      new_transition.begin_state = transition_fn_begin_state;
+      new_transition.end_state = transition_fn_end_state;
+      automaton.transitions.push_back(new_transition);
     }
-  }
+  }//END handle transition line
+}
+
+void handle_input_string(const std::string input){
 
 }
+
+
