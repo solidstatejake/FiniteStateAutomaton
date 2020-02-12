@@ -237,6 +237,13 @@ void create_automaton(Automaton &automaton, std::vector<std::string> &data_vecto
     }
   }//END handle transition line
 }
+void handle_transition_line(){
+
+}
+
+void handle_state_line(){
+
+}
 
 void handle_input_string(const std::string input){
 
