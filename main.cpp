@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <regex>
+#include <map>
 #include <string>
 
 static constexpr char ALPHABET[] =
@@ -24,11 +25,13 @@ struct State {
     bool is_accept = false;
     bool is_start = false;
     long id = 0;
+    std::map<std::string, std::vector<long>> transitions;
 };
 
+
 struct Transition {
-    std::string symbol;
     State begin_state;
+    std::string symbol;
     State end_state;
 };
 
@@ -44,11 +47,11 @@ struct ConfigurationSequence {
     std::string input_string;
 };
 
-std::vector<std::string> split(const std::string original_str,
+std::vector<std::string> split(const std::string &original_str,
                                const char &delim);
 
 std::vector<std::string>
-split(const std::string original_str,
+split(const std::string &original_str,
       const char &delim,
       std::vector<std::string> &split_string
 );
@@ -76,7 +79,7 @@ void handle_transition_line(Automaton &automaton,
 
 void initialize_configuration_sequence(ConfigurationSequence &configuration_sequence,
                                        State start_state,
-                                       const std::string &input_string) ;
+                                       const std::string &input_string);
 
 int main(int argc, char* argv[]) {
 
@@ -85,7 +88,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> data_vector;
 
 
-  //TODO change 3 to 2 when finished.
   if ( argc != 3 ) {
     std::cerr << "Error:\t Three arguments were not detected." << "\n"
               << "Usage:\t this_file_name\t automaton_specs.txt\tautomaton_config_string" << "\n"
@@ -95,14 +97,31 @@ int main(int argc, char* argv[]) {
   }
 
   const std::string in_file_handle = argv[ 1 ];
-  const std::string input_string = argv[2];
+  const std::string input_string = argv[ 2 ];
 
   parse_file( in_file_handle, data_vector );
 
   create_automaton( automaton, data_vector );
 
-  initialize_configuration_sequence(configuration_sequence, automaton.start_state, input_string);
+  initialize_configuration_sequence( configuration_sequence, automaton.start_state, input_string );
 
+  std::string::iterator str_itr;
+
+  //initial config for current_transition
+  Transition current_transition;
+  current_transition.begin_state = automaton.start_state;
+  current_transition.symbol = input_string[ 0 ];
+  //Now I need to find a transition in automaton.transitions that has begin_state == current_transition.begin_state
+  // and symbol == inputstring[current_pos] So i need to iterate through transitions
+  std::for_each( automaton.transitions.begin(), automaton.transitions.end(), [](const auto &trans) {
+      if ( trans.symbol == current_transition.symbol && trans.begin_state.id == current_transition.begin_state.id );
+  } );
+  current_transition.end_state = std::find( automaton.transitions.begin(), automaton.transitions.end(), )
+
+  std::for_each( configuration_sequence.input_string.begin(), configuration_sequence.input_string.end(),
+                 [](const auto current_char) {
+
+                 } );
 
   return 0;
 }
@@ -141,7 +160,7 @@ void parse_file(const std::string &file_name, std::vector<std::string> &data_vec
  *    @std::string original_str               : The string to be split.
  *    @char delim                             : The delimiter along which to split string.
  */
-std::vector<std::string> split(const std::string original_str, const char &delim) {
+std::vector<std::string> split(const std::string &original_str, const char &delim) {
   std::vector<std::string> split_string;
   std::string spliced_string = original_str;
 
@@ -164,7 +183,7 @@ std::vector<std::string> split(const std::string original_str, const char &delim
  *    @std::vector<std::string> &split_string : A reference to a vector which will contain the split string.
  */
 std::vector<std::string>
-split(const std::string original_str, const char &delim, std::vector<std::string> &split_string) {
+split(const std::string &original_str, const char &delim, std::vector<std::string> &split_string) {
   std::string spliced_string = original_str;
 
   if ( original_str.find_first_of( delim ) == std::string::npos ) {
@@ -257,24 +276,24 @@ void handle_transition_line(Automaton &automaton,
                             const std::regex &transition_function_pattern,
                             const std::string &current_line) {
   std::vector<std::string> split_line = split( current_line, '\t' );
+
   if ( !matches.empty() ) {
+    //Remove word 'transition' from line.
     split_line.erase( split_line.begin() );
 
     State transition_fn_begin_state, transition_fn_end_state;
+
     Transition new_transition;
-    long arg1 = std::stol( split_line[ 0 ] ),
-            arg3 = std::stol( split_line[ 2 ] );
+    long arg1 = std::stol( split_line[ 0 ] ), arg3 = std::stol( split_line[ 2 ] );
     std::string arg2 = split_line[ 1 ];
 
     std::regex_search( current_line, matches, transition_function_pattern );
     //Determine if either of states in current transition are NOT already registered in the automaton.
     std::vector<long> state_ids;
 
-    for ( const auto &current_automaton_state : automaton.states )
-      state_ids.push_back( current_automaton_state.id );
+    for ( const auto &current_automaton_state : automaton.states ) state_ids.push_back( current_automaton_state.id );
 
     std::sort( state_ids.begin(), state_ids.end() );
-
     //Create new states (neither start nor accept) where missing.
     for ( auto current_arg: { arg1, arg3 } ) {
       if ( !std::binary_search( state_ids.begin(), state_ids.end(), current_arg ) ) {
@@ -285,6 +304,15 @@ void handle_transition_line(Automaton &automaton,
       state_ids.push_back( current_arg );
       std::sort( state_ids.begin(), state_ids.end() );
     }
+
+    for ( const auto &current_automaton_state : automaton.states ) {
+      if ( current_automaton_state.id == arg1 ) {
+        current_automaton_state.transitions[ arg2 ].push_back( arg3 );
+      }
+      state_ids.push_back( current_automaton_state.id );
+    }
+
+
 
     //Done adding states to automaton.
     //BEGIN transitions.
@@ -299,10 +327,15 @@ void handle_transition_line(Automaton &automaton,
 }
 
 void initialize_configuration_sequence(ConfigurationSequence &configuration_sequence,
-                                        State start_state,
-                                        const std::string &input_string) {
+                                       State start_state,
+                                       const std::string &input_string) {
   configuration_sequence.current_state = start_state;
   configuration_sequence.input_string = input_string;
 }
 
+void process_configuration_sequence(const Automaton &automaton,
+                                    ConfigurationSequence &configuration_sequence) {
+
+
+}
 
