@@ -39,14 +39,27 @@ struct Automaton {
     std::vector<Transition> transitions;
 };
 
-std::vector<std::string> split(const std::string original_str, const char &delim);
+struct ConfigurationSequence {
+    State current_state;
+    std::string input_string;
+};
+
+std::vector<std::string> split(const std::string original_str,
+                               const char &delim);
 
 std::vector<std::string>
-split(const std::string original_str, const char &delim, std::vector<std::string> &split_string);
+split(const std::string original_str,
+      const char &delim,
+      std::vector<std::string> &split_string
+);
 
-void parse_file(const std::string &file_name, std::vector<std::string> &data_vector);
+void parse_file(const std::string &file_name,
+                std::vector<std::string> &data_vector
+);
 
-void create_automaton(Automaton &automaton, std::vector<std::string> &data_vector);
+void create_automaton(Automaton &automaton,
+                      std::vector<std::string> &data_vector
+);
 
 void handle_state_line(Automaton &automaton,
                        std::smatch matches,
@@ -61,16 +74,19 @@ void handle_transition_line(Automaton &automaton,
                             const std::string &current_line
 );
 
+void initialize_configuration_sequence(ConfigurationSequence &configuration_sequence,
+                                       State start_state,
+                                       const std::string &input_string) ;
+
 int main(int argc, char* argv[]) {
 
   Automaton automaton;
-  const std::string in_file_handle = argv[ 1 ];
-  std::vector<std::string> split_str;
+  ConfigurationSequence configuration_sequence;
   std::vector<std::string> data_vector;
-  std::ostream_iterator<std::string> screen( std::cout, " " );
+
 
   //TODO change 3 to 2 when finished.
-  if ( argc != 2 ) {
+  if ( argc != 3 ) {
     std::cerr << "Error:\t Three arguments were not detected." << "\n"
               << "Usage:\t this_file_name\t automaton_specs.txt\tautomaton_config_string" << "\n"
               << "Halting with exit code 1." << "\n";
@@ -78,15 +94,14 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
+  const std::string in_file_handle = argv[ 1 ];
+  const std::string input_string = argv[2];
+
   parse_file( in_file_handle, data_vector );
 
   create_automaton( automaton, data_vector );
-//
-//  for ( auto split_string : data_vector ) {
-//    for (const auto &word : split_string ) {
-//      std::cout << word << "\n";
-//    }
-//  }
+
+  initialize_configuration_sequence(configuration_sequence, automaton.start_state, input_string);
 
 
   return 0;
@@ -283,9 +298,11 @@ void handle_transition_line(Automaton &automaton,
   }
 }
 
-void handle_input_string(const std::string input) {
-
-
+void initialize_configuration_sequence(ConfigurationSequence &configuration_sequence,
+                                        State start_state,
+                                        const std::string &input_string) {
+  configuration_sequence.current_state = start_state;
+  configuration_sequence.input_string = input_string;
 }
 
 

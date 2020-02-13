@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faf9cc64-2692-46c1-9de7-a15362a46a9f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -27,28 +28,27 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="236" column="41" selection-start-line="236" selection-start-column="41" selection-end-line="236" selection-end-column="41" />
+                <state relative-caret-position="516">
+                  <caret line="304" column="53" lean-forward="true" selection-start-line="304" selection-start-column="53" selection-end-line="304" selection-end-column="53" />
                   <folding>
+                    <element signature="e#0#315#0" expanded="true" />
                     <element signature="e#317#336#0" expanded="true" />
-                    <element signature="e#8533#9126#0" expanded="true" />
-                    <element signature="e#8468#8501#0" expanded="true" />
-                    <element signature="e#8533#8586#0" expanded="true" />
+                    <marker date="1581571852841" expanded="false" signature="2407:10635" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="input1.dat" pinned="false" current-in-tab="false">
+          <file leaf-file-name="input1.dat" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/input1.dat">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="45">
@@ -60,15 +60,16 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="250" column="20" lean-forward="true" selection-start-line="250" selection-start-column="20" selection-end-line="250" selection-end-column="20" />
+                <state relative-caret-position="314">
+                  <caret line="103" column="97" selection-start-line="103" selection-start-column="97" selection-end-line="103" selection-end-column="97" />
                   <folding>
+                    <element signature="e#0#315#0" expanded="true" />
                     <element signature="e#317#336#0" expanded="true" />
-                    <element signature="e#4899#8532#0" expanded="true" />
+                    <element signature="e#10737#11060#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -83,6 +84,7 @@
       <find>cout</find>
       <find>automaton.states</find>
       <find>stol</find>
+      <find>id_pattern</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -167,46 +169,34 @@
       <option name="presentableId" value="Default" />
       <updated>1581379177886</updated>
       <workItem from="1581379179632" duration="37448000" />
+      <workItem from="1581570524816" duration="1230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39514000" />
+    <option name="totallyTimeSpent" value="42396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32923076" />
-      <window_info anchor="bottom" id="CMake" weight="0.32935324" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32935324" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.26153848" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32935324" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33948717" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +207,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -230,6 +220,28 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4320">
+          <caret line="288" column="40" lean-forward="true" selection-start-line="288" selection-start-column="40" selection-end-line="290" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#317#336#0" expanded="true" />
+            <element signature="e#10737#11060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -259,10 +271,9 @@
         <state relative-caret-position="1027">
           <caret line="248" lean-forward="true" selection-start-line="248" selection-end-line="248" />
           <folding>
+            <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#8533#9126#0" expanded="true" />
-            <element signature="e#8468#8501#0" expanded="true" />
-            <element signature="e#8533#8586#0" expanded="true" />
+            <element signature="e#10737#11060#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -289,10 +300,9 @@
         <state relative-caret-position="1406">
           <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
           <folding>
+            <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#8533#9126#0" expanded="true" />
-            <element signature="e#8468#8501#0" expanded="true" />
-            <element signature="e#8533#8586#0" expanded="true" />
+            <element signature="e#10737#11060#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -323,13 +333,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="236" column="41" selection-start-line="236" selection-start-column="41" selection-end-line="236" selection-end-column="41" />
+        <state relative-caret-position="314">
+          <caret line="103" column="97" selection-start-line="103" selection-start-column="97" selection-end-line="103" selection-end-column="97" />
           <folding>
+            <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#8533#9126#0" expanded="true" />
-            <element signature="e#8468#8501#0" expanded="true" />
-            <element signature="e#8533#8586#0" expanded="true" />
+            <element signature="e#10737#11060#0" expanded="true" />
           </folding>
         </state>
       </provider>
