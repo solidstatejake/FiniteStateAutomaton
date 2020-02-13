@@ -48,6 +48,18 @@ void parse_file(const std::string &file_name, std::vector<std::string> &data_vec
 
 void create_automaton(Automaton &automaton, std::vector<std::string> &data_vector);
 
+void handle_state_line(Automaton &automaton,
+                       std::smatch matches,
+                       const std::string &current_line,
+                       const std::regex &id_pattern,
+                       const std::regex &start_pattern,
+                       const std::regex &accept_pattern);
+
+void handle_transition_line(Automaton &automaton,
+                            std::smatch matches,
+                            const std::regex &transition_function_pattern,
+                            const std::string &current_line
+);
 
 int main(int argc, char* argv[]) {
 
@@ -166,86 +178,113 @@ void create_automaton(Automaton &automaton, std::vector<std::string> &data_vecto
           accept_pattern{ "accept" },
           start_and_accept_pattern{ R"((start\taccept)|(accept\tstart))" };
 
-  std::vector<std::string> split_line;
   std::smatch matches;
 
-  for ( const auto &current_line : data_vector ) {
-    split_line = split( current_line, '\t' );
+  for ( const std::string &current_line : data_vector ) {
 
     std::regex_search( current_line, matches, state_pattern );
 
-    //Handle state line
-    if ( !matches.empty() ) {
-      State new_state;
-      //find id number
-      std::regex_search( current_line, matches, id_pattern );
-      if ( !matches.empty() ) new_state.id = std::stol( matches.str( 0 ) );
-      //check if start state
-      std::regex_search( current_line, matches, start_pattern );
-      if ( !matches.empty() ) new_state.is_start = true;
-      //check if accept state
-      std::regex_search( current_line, matches, accept_pattern );
-      if ( !matches.empty() ) new_state.is_accept = true;
 
-      //Handle appending new_state to automaton.
-      automaton.states.push_back( new_state );
-      if ( new_state.is_start ) automaton.start_state = new_state;
-      if ( new_state.is_accept ) automaton.end_states.push_back( new_state );
-    }//END handle state line
+    handle_state_line( automaton, matches, current_line, id_pattern, start_pattern, accept_pattern );
+
 
     std::regex_search( current_line, matches, transition_pattern );
 
-    //Handle transition line
-    if ( !matches.empty() ) {
-      split_line.erase( split_line.begin() );
+    handle_transition_line( automaton, matches, transition_function_pattern, current_line );
+  }
+}
 
-      State transition_fn_begin_state, transition_fn_end_state;
-      Transition new_transition;
-      long arg1 = std::stol( split_line[ 0 ] ),
-              arg3 = std::stol( split_line[ 2 ] );
-      std::string arg2 = split_line[ 1 ];
+/*
+* Author:      Jacob Berg
+* Date:        February 12, 2020 @ 6:32PM
+* Description: Determines if line read from data read from input file is a state line, then updates
+ *             the automata's list of states for each state line. State lines will only consist of
+ *             start or accept states.
+*/
+void handle_state_line(Automaton &automaton,
+                       std::smatch matches,
+                       const std::string &current_line,
+                       const std::regex &id_pattern,
+                       const std::regex &start_pattern,
+                       const std::regex &accept_pattern) {
 
-      std::regex_search( current_line, matches, transition_function_pattern );
-      //Determine if either of states in current transition are NOT already registered in the automaton.
-      std::vector<long> state_ids;
+  if ( !matches.empty() ) {
+    State new_state;
+    //find id number
+    std::regex_search( current_line, matches, id_pattern );
+    if ( !matches.empty() ) new_state.id = std::stol( matches.str( 0 ) );
+    //check if start state
+    std::regex_search( current_line, matches, start_pattern );
+    if ( !matches.empty() ) new_state.is_start = true;
+    //check if accept state
+    std::regex_search( current_line, matches, accept_pattern );
+    if ( !matches.empty() ) new_state.is_accept = true;
 
-      for ( const auto &current_automaton_state : automaton.states )
-        state_ids.push_back( current_automaton_state.id );
+    //Handle appending new_state to automaton.
+    automaton.states.push_back( new_state );
+    if ( new_state.is_start ) automaton.start_state = new_state;
+    if ( new_state.is_accept ) automaton.end_states.push_back( new_state );
+  }
 
-      std::sort( state_ids.begin(), state_ids.end() );
+}
 
-      //Create new states (neither start nor accept) where missing.
-      for ( auto current_arg: { arg1, arg3 } ) {
-        if ( !std::binary_search( state_ids.begin(), state_ids.end(), current_arg ) ) {
-          State new_state;
-          new_state.id = current_arg;
-          automaton.states.push_back( new_state );
-        }
-        state_ids.push_back( current_arg ) ;
-        std::sort( state_ids.begin(), state_ids.end() );
+
+/*
+ * Author:      Jacob Berg
+ * Date:        February 12, 2020 @ 11:43PM
+ * Description: Determines if line read from data read from input file is a transition line, then updates
+ *              the automata's list of transitions for each transition line. If a transition contains a
+ *              state which was not already a part of the automata's states, then it adds it to the set of
+ *              states.
+*/
+void handle_transition_line(Automaton &automaton,
+                            std::smatch matches,
+                            const std::regex &transition_function_pattern,
+                            const std::string &current_line) {
+  std::vector<std::string> split_line = split( current_line, '\t' );
+  if ( !matches.empty() ) {
+    split_line.erase( split_line.begin() );
+
+    State transition_fn_begin_state, transition_fn_end_state;
+    Transition new_transition;
+    long arg1 = std::stol( split_line[ 0 ] ),
+            arg3 = std::stol( split_line[ 2 ] );
+    std::string arg2 = split_line[ 1 ];
+
+    std::regex_search( current_line, matches, transition_function_pattern );
+    //Determine if either of states in current transition are NOT already registered in the automaton.
+    std::vector<long> state_ids;
+
+    for ( const auto &current_automaton_state : automaton.states )
+      state_ids.push_back( current_automaton_state.id );
+
+    std::sort( state_ids.begin(), state_ids.end() );
+
+    //Create new states (neither start nor accept) where missing.
+    for ( auto current_arg: { arg1, arg3 } ) {
+      if ( !std::binary_search( state_ids.begin(), state_ids.end(), current_arg ) ) {
+        State new_state;
+        new_state.id = current_arg;
+        automaton.states.push_back( new_state );
       }
-
-      //Done adding states to automaton.
-      //BEGIN transitions.
-
-      transition_fn_begin_state.id = arg1;
-      transition_fn_end_state.id = arg3;
-      new_transition.symbol = arg2;
-      new_transition.begin_state = transition_fn_begin_state;
-      new_transition.end_state = transition_fn_end_state;
-      automaton.transitions.push_back(new_transition);
+      state_ids.push_back( current_arg );
+      std::sort( state_ids.begin(), state_ids.end() );
     }
-  }//END handle transition line
+
+    //Done adding states to automaton.
+    //BEGIN transitions.
+
+    transition_fn_begin_state.id = arg1;
+    transition_fn_end_state.id = arg3;
+    new_transition.symbol = arg2;
+    new_transition.begin_state = transition_fn_begin_state;
+    new_transition.end_state = transition_fn_end_state;
+    automaton.transitions.push_back( new_transition );
+  }
 }
-void handle_transition_line(){
 
-}
+void handle_input_string(const std::string input) {
 
-void handle_state_line(){
-
-}
-
-void handle_input_string(const std::string input){
 
 }
 
