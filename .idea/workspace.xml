@@ -5,14 +5,20 @@
       <config projectName="ProgrammingAssignment1" targetName="ProgrammingAssignment1" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faf9cc64-2692-46c1-9de7-a15362a46a9f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/input3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgrammingAssignment1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgrammingAssignment1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgrammingAssignment1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgrammingAssignment1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProgrammingAssignment1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProgrammingAssignment1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -25,41 +31,55 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2292">
-              <caret line="304" column="46" lean-forward="true" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#315#0" expanded="true" />
-                <element signature="e#317#336#0" expanded="true" />
-                <element signature="e#2408#3366#0" expanded="true" />
-                <element signature="e#4541#5087#1" expanded="true" />
-                <element signature="e#10737#11060#0" expanded="true" />
-                <element signature="e#10969#11121#0" expanded="true" />
-                <marker date="1581606331563" expanded="false" signature="1260:2493" ph="..." />
-                <marker date="1581606331563" expanded="true" signature="2495:11836" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input1.dat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input1.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.46172392">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" selection-start-line="4" selection-end-line="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="101" column="3" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#315#0" expanded="true" />
+                    <element signature="e#317#336#0" expanded="true" />
+                    <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+                    <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="172">
+                  <caret line="189" selection-start-line="189" selection-end-line="189" />
+                  <folding>
+                    <element signature="e#0#315#0" expanded="true" />
+                    <element signature="e#317#336#0" expanded="true" />
+                    <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+                    <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -67,6 +87,10 @@
       <find>automaton.states</find>
       <find>stol</find>
       <find>id_pattern</find>
+      <find>automaton.transitions</find>
+      <find>end_state</find>
+      <find>accept_state</find>
+      <find>iterator</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -80,6 +104,8 @@
       <list>
         <option value="$PROJECT_DIR$/input1.txt" />
         <option value="$PROJECT_DIR$/input1.dat" />
+        <option value="$PROJECT_DIR$/input3.dat" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -93,6 +119,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
@@ -103,6 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,14 +142,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,9 +162,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build All">
+  <component name="RunManager" selected="Application.ProgrammingAssignment1">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProgrammingAssignment1" RUN_TARGET_NAME="ProgrammingAssignment1" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="ProgrammingAssignment1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProgrammingAssignment1" TARGET_NAME="ProgrammingAssignment1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProgrammingAssignment1" RUN_TARGET_NAME="ProgrammingAssignment1" />
+    <configuration name="ProgrammingAssignment1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./input1.dat" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProgrammingAssignment1" TARGET_NAME="ProgrammingAssignment1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProgrammingAssignment1" RUN_TARGET_NAME="ProgrammingAssignment1" />
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.ProgrammingAssignment1" />
@@ -151,35 +178,36 @@
       <option name="presentableId" value="Default" />
       <updated>1581379177886</updated>
       <workItem from="1581379179632" duration="37448000" />
-      <workItem from="1581570524816" duration="6369000" />
+      <workItem from="1581570524816" duration="22443000" />
+      <workItem from="1581693152984" duration="15358000" />
+      <workItem from="1581787095657" duration="930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47535000" />
+    <option name="totallyTimeSpent" value="79897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32935324" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4502564" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1948718" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +218,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -203,6 +231,59 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#317#336#0" expanded="true" />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input3.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5235">
+          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#317#336#0" expanded="true" />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -220,12 +301,8 @@
           <folding>
             <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#2408#3366#0" expanded="true" />
-            <element signature="e#4541#5087#1" expanded="true" />
-            <element signature="e#10737#11060#0" expanded="true" />
-            <element signature="e#10969#11121#0" expanded="true" />
-            <marker date="1581606331563" expanded="false" signature="1260:2493" ph="..." />
-            <marker date="1581606331563" expanded="true" signature="2495:11836" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
           </folding>
         </state>
       </provider>
@@ -261,12 +338,8 @@
           <folding>
             <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#2408#3366#0" expanded="true" />
-            <element signature="e#4541#5087#1" expanded="true" />
-            <element signature="e#10737#11060#0" expanded="true" />
-            <element signature="e#10969#11121#0" expanded="true" />
-            <marker date="1581606331563" expanded="false" signature="1260:2493" ph="..." />
-            <marker date="1581606331563" expanded="true" signature="2495:11836" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
           </folding>
         </state>
       </provider>
@@ -295,23 +368,9 @@
           <folding>
             <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#2408#3366#0" expanded="true" />
-            <element signature="e#4541#5087#1" expanded="true" />
-            <element signature="e#10737#11060#0" expanded="true" />
-            <element signature="e#10969#11121#0" expanded="true" />
-            <marker date="1581606331563" expanded="false" signature="1260:2493" ph="..." />
-            <marker date="1581606331563" expanded="true" signature="2495:11836" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="810" selection-start-line="810" selection-end-line="810" />
         </state>
       </provider>
     </entry>
@@ -322,26 +381,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="2948" column="43" selection-start-line="2948" selection-start-column="43" selection-end-line="2948" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input3.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/input1.dat">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2292">
-          <caret line="304" column="46" lean-forward="true" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="46" />
+        <state relative-caret-position="172">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
             <element signature="e#317#336#0" expanded="true" />
-            <element signature="e#2408#3366#0" expanded="true" />
-            <element signature="e#4541#5087#1" expanded="true" />
-            <element signature="e#10737#11060#0" expanded="true" />
-            <element signature="e#10969#11121#0" expanded="true" />
-            <marker date="1581606331563" expanded="false" signature="1260:2493" ph="..." />
-            <marker date="1581606331563" expanded="true" signature="2495:11836" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="1027:2358" ph="..." />
+            <marker date="1581785525422" expanded="true" signature="2598:13046" ph="..." />
           </folding>
         </state>
       </provider>

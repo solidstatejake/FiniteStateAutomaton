@@ -17,6 +17,10 @@ algorithm
 -
 regex
 -
+map
+-
+iterator
+-
 string
 -
 
