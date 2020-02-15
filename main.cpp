@@ -102,7 +102,7 @@ int main(int argc, char* argv[]) {
   }
 
   std::ifstream zeroes_file( "new.txt" );
-  std::string input_string;
+  std::string input_string = "01";
   zeroes_file >> input_string;
   zeroes_file.close();
   const std::string in_file_handle = argv[ 1 ];
@@ -115,63 +115,62 @@ int main(int argc, char* argv[]) {
 
   initialize_configuration_sequence( config_seq, automaton.start_state, input_string );
 
-  /*TODO
-   * IDEA: Since the error is occurring when calling the recursive functions
-   *        assuming because the vectors are taking up too much space on the heap (stack?).
-   *        We can, perhaps, use dynamic allocation with arrays (Whose size is determined by,
-   *        say, the size of the input string, or the size of the number of states, or it can be
-   *        multiple arrays whose sizes are the number of unique symbols, and then in each entry,
-   *        we can input another fixed-size array whose size is the number of transitions the
-   *        specific state has for a given symbol.
-   *
-   *  IDEA2: Perhaps we can change the structure of the
-   *
-   *              std::map<std::string, std::vector<long> >
-   *
-   *         into
-   *
-   *              std::vector< std::map<std::string, long> >
-   *
-   *         or something like that. Seems like using a map just to hold a vector is a waste of
-   *         space.
-
-   *
-   */
-  //PRINT STATES and their TRANSITIONS
-//  for(auto i : automaton.states) {
-//    std::cout << "State " << i.id << " has transitions"  << "\n";
-//    for(auto j : i.transitions) {
-//      std::cout << j.first << " -> ";
-//      for (auto k : j.second) {
-//        std::cout << k  << "\n";
-//      }
-//    }
-//  }
-//  for ( int i = 0; i < input_string.length(); i++ ) {
+//  /*TODO
+//   * IDEA: Since the error is occurring when calling the recursive functions
+//   *        assuming because the vectors are taking up too much space on the heap (stack?).
+//   *        We can, perhaps, use dynamic allocation with arrays (Whose size is determined by,
+//   *        say, the size of the input string, or the size of the number of states, or it can be
+//   *        multiple arrays whose sizes are the number of unique symbols, and then in each entry,
+//   *        we can input another fixed-size array whose size is the number of transitions the
+//   *        specific state has for a given symbol.
+//   *
+//   *  IDEA2: Perhaps we can change the structure of the
+//   *
+//   *              std::map<std::string, std::vector<long> >
+//   *
+//   *         into
+//   *
+//   *              std::vector< std::map<std::string, long> >
+//   *
+//   *         or something like that. Seems like using a map just to hold a vector is a waste of
+//   *         space.
+//
+//   *
+//   */
+//  //PRINT STATES and their TRANSITIONS
+////  for(auto i : automaton.states) {
+////    std::cout << "State " << i.id << " has transitions"  << "\n";
+////    for(auto j : i.transitions) {
+////      std::cout << j.first << " -> ";
+////      for (auto k : j.second) {
+////        std::cout << k  << "\n";
+////      }
+////    }
+////  }
+////  for ( int i = 0; i < input_string.length(); i++ ) {
   process_configuration_sequence( automaton,
                                   config_seq.current_state,
                                   config_seq.input_string,
                                   output
   );
-//    config_seq.input_string.erase( config_seq.input_string.begin() );
-//    if ( config_seq.input_string.empty() ) break;
-//  }
+////    config_seq.input_string.erase( config_seq.input_string.begin() );
+////    if ( config_seq.input_string.empty() ) break;
+////  }
   std::sort( output.final_states.begin(), output.final_states.end() );
   auto itr = std::unique( output.final_states.begin(), output.final_states.end() );
   output.final_states.resize( std::distance( output.final_states.begin(), itr ) );
   std::cout << ( output.is_accept ? "accept\t" : "reject\t" );
   for ( const auto &final_state : output.final_states ) std::cout << final_state << " ";
   std::cout << "\n";
-//
-//  std::ofstream outfile;
-//
-//  outfile.open("new.txt");
-//
-//  for(int i = 1; i != 1'000'000; i++){
-//    outfile << 0;
-//  }
-//
-//  outfile.close();
+
+  std::ofstream outfile("new.txt");
+
+  if(!outfile.is_open()) std::cout << "It's not opening"  << "\n";
+  for(int i = 1; i != 500; i++){
+    outfile << "01";
+  }
+
+  outfile.close();
   return 0;
 
 }
