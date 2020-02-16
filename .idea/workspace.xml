@@ -12,6 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faf9cc64-2692-46c1-9de7-a15362a46a9f" name="Default" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/input2.dat" afterDir="false" />
+>>>>>>> array_refactor
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out.dSYM/Contents/Resources/DWARF/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out.dSYM/Contents/Resources/DWARF/a.out" afterDir="false" />
@@ -28,7 +32,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.51898736">
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.477396">
+>>>>>>> array_refactor
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
@@ -43,15 +51,49 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="1401">
                   <caret line="170" column="3" selection-start-line="170" selection-start-column="3" selection-end-line="170" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#315#0" expanded="true" />
+=======
+                <state relative-caret-position="525">
+                  <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#0#315#0" expanded="true" />
+                    <element signature="e#892#1288#0" expanded="true" />
+                    <element signature="e#892#1719#0" expanded="true" />
+                    <element signature="e#2558#2937#0" expanded="true" />
+                    <element signature="e#2558#3508#0" expanded="true" />
+                    <element signature="e#1721#1991#0" expanded="true" />
+                    <element signature="e#1721#2556#0" expanded="true" />
+                    <element signature="e#4837#5148#0" expanded="true" />
+                    <element signature="e#4837#5994#0" expanded="true" />
+                    <element signature="e#5997#6414#0" expanded="true" />
+                    <element signature="e#5997#7998#0" expanded="true" />
+                    <element signature="e#3510#3954#0" expanded="true" />
+                    <element signature="e#3510#4835#0" expanded="true" />
+                    <element signature="e#8000#8345#0" expanded="true" />
+                    <element signature="e#8000#8587#0" expanded="true" />
+                    <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
+=======
+          <file leaf-file-name="input2.dat" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/input2.dat">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+>>>>>>> array_refactor
           <file leaf-file-name="input1.dat" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/input1.dat">
               <provider selected="true" editor-type-id="text-editor">
@@ -65,7 +107,11 @@
             <entry file="file://$PROJECT_DIR$/new.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
+<<<<<<< HEAD
                   <caret column="41" selection-start-column="41" selection-end-column="41" />
+=======
+                  <caret column="36" selection-start-column="36" selection-end-column="36" />
+>>>>>>> array_refactor
                 </state>
               </provider>
             </entry>
@@ -77,10 +123,20 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="396">
                   <caret line="402" selection-start-line="402" selection-end-line="402" />
                   <folding>
                     <element signature="e#0#315#0" expanded="true" />
+=======
+                <state relative-caret-position="471">
+                  <caret line="345" selection-start-line="345" selection-end-line="345" />
+                  <folding>
+                    <element signature="e#0#315#0" expanded="true" />
+                    <element signature="e#2558#3508#0" expanded="true" />
+                    <element signature="e#5997#7998#0" expanded="true" />
+                    <element signature="e#8589#9522#0" expanded="true" />
+>>>>>>> array_refactor
                   </folding>
                 </state>
               </provider>
@@ -101,6 +157,11 @@
       <find>accept_state</find>
       <find>iterator</find>
       <find>long</find>
+<<<<<<< HEAD
+=======
+      <find>endpoints</find>
+      <find>configuration_seq</find>
+>>>>>>> array_refactor
     </findStrings>
     <replaceStrings>
       <replace />
@@ -116,6 +177,8 @@
         <option value="$PROJECT_DIR$/input1.dat" />
         <option value="$PROJECT_DIR$/input3.dat" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/input2.dat" />
+        <option value="$PROJECT_DIR$/new.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -130,7 +193,7 @@
     <packageJsonPaths />
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -191,16 +254,27 @@
       <workItem from="1581570524816" duration="22443000" />
       <workItem from="1581693152984" duration="15358000" />
       <workItem from="1581787095657" duration="930000" />
+      <workItem from="1581789368449" duration="4425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="80475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1106" y="-1080" width="1920" height="1080" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24907847" />
+=======
+    <option name="totallyTimeSpent" value="92436000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24907847" />
+>>>>>>> array_refactor
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32923076" />
@@ -209,20 +283,33 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3074627" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
+>>>>>>> array_refactor
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42153847" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24907847" />
+>>>>>>> array_refactor
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33948717" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4502564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.1948718" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3074627" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42153847" />
+>>>>>>> array_refactor
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -253,6 +340,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2835">
@@ -269,6 +357,8 @@
     <entry file="file://$PROJECT_DIR$/new.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> array_refactor
     <entry file="file://$PROJECT_DIR$/input1.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -289,6 +379,24 @@
           <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
           </folding>
         </state>
       </provider>
@@ -309,6 +417,24 @@
           <caret line="288" column="40" lean-forward="true" selection-start-line="288" selection-start-column="40" selection-end-line="290" selection-end-column="5" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
           </folding>
         </state>
       </provider>
@@ -343,6 +469,24 @@
           <caret line="248" lean-forward="true" selection-start-line="248" selection-end-line="248" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
           </folding>
         </state>
       </provider>
@@ -370,6 +514,24 @@
           <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
           </folding>
         </state>
       </provider>
@@ -395,6 +557,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -406,171 +569,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="115" column="33" lean-forward="true" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input3.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5235">
-          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4320">
-          <caret line="288" column="40" lean-forward="true" selection-start-line="288" selection-start-column="40" selection-end-line="290" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="810" selection-start-line="810" selection-end-line="810" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="248" lean-forward="true" selection-start-line="248" selection-end-line="248" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38342">
-          <caret line="2948" column="43" selection-start-line="2948" selection-start-column="43" selection-end-line="2948" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1406">
-          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
-          <folding>
-            <element signature="e#0#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2948" column="43" selection-start-line="2948" selection-start-column="43" selection-end-line="2948" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input3.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/input1.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -582,10 +581,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+>>>>>>> array_refactor
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new.txt">
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="115" column="33" lean-forward="true" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="41" selection-start-column="41" selection-end-column="41" />
@@ -598,6 +608,370 @@
           <caret line="170" column="3" selection-start-line="170" selection-start-column="3" selection-end-line="170" selection-end-column="3" />
           <folding>
             <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input3.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5235">
+          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4320">
+          <caret line="288" column="40" lean-forward="true" selection-start-line="288" selection-start-column="40" selection-end-line="290" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="810" selection-start-line="810" selection-end-line="810" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="248" lean-forward="true" selection-start-line="248" selection-end-line="248" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38342">
+          <caret line="2948" column="43" selection-start-line="2948" selection-start-column="43" selection-end-line="2948" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="2948" column="43" selection-start-line="2948" selection-start-column="43" selection-end-line="2948" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input3.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+=======
+        <state>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+>>>>>>> array_refactor
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.dat">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+=======
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+>>>>>>> array_refactor
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1401">
+          <caret line="170" column="3" selection-start-line="170" selection-start-column="3" selection-end-line="170" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+=======
+        <state relative-caret-position="525">
+          <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#315#0" expanded="true" />
+            <element signature="e#892#1288#0" expanded="true" />
+            <element signature="e#892#1719#0" expanded="true" />
+            <element signature="e#2558#2937#0" expanded="true" />
+            <element signature="e#2558#3508#0" expanded="true" />
+            <element signature="e#1721#1991#0" expanded="true" />
+            <element signature="e#1721#2556#0" expanded="true" />
+            <element signature="e#4837#5148#0" expanded="true" />
+            <element signature="e#4837#5994#0" expanded="true" />
+            <element signature="e#5997#6414#0" expanded="true" />
+            <element signature="e#5997#7998#0" expanded="true" />
+            <element signature="e#3510#3954#0" expanded="true" />
+            <element signature="e#3510#4835#0" expanded="true" />
+            <element signature="e#8000#8345#0" expanded="true" />
+            <element signature="e#8000#8587#0" expanded="true" />
+            <element signature="e#2630#5823#0" expanded="true" />
+>>>>>>> array_refactor
           </folding>
         </state>
       </provider>

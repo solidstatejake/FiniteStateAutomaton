@@ -1,0 +1,88 @@
+diff --git a/main.cpp b/main.cpp
+index 98dad39..9d1ca40 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -102,10 +102,12 @@ int main(int argc, char* argv[]) {
+   }
+ 
+   std::ifstream zeroes_file( "new.txt" );
+-  auto input_string = new std::string("0101010101");
++  auto input_string = new std::string("11111") ;
+ //  zeroes_file >> *input_string;
+   zeroes_file.close();
+ 
++  std::cout << *input_string  << "\n";
++
+   const std::string in_file_handle = argv[ 1 ];
+ 
+   parse_file( in_file_handle, data_vector );
+@@ -156,19 +158,19 @@ int main(int argc, char* argv[]) {
+ 
+   std::sort( output.final_states.begin(), output.final_states.end() );
+   auto itr = std::unique( output.final_states.begin(), output.final_states.end() );
+-//  output.final_states.resize( std::distance( output.final_states.begin(), itr ) );
++  output.final_states.resize( std::distance( output.final_states.begin(), itr ) );
+   std::cout << ( output.is_accept ? "accept\t" : "reject\t" );
+   for ( const auto &final_state : output.final_states ) std::cout << final_state << " ";
+   std::cout << "\n";
+-////
+-//  std::ofstream outfile("new.txt");
+-//
+-//  if (!outfile.is_open()) {std::cerr << "It's not fucking opening." << "\n"; }
+-//  for(int i = 1; i != 5000; i++){
+-//    outfile << "01";
+-//  }
+-//
+-//  outfile.close();
++
++  std::ofstream outfile("new.txt");
++
++  if (!outfile.is_open()) {std::cerr << "It's not fucking opening." << "\n"; }
++  for(int i = 1; i != 10000; i++){
++    outfile << "01";
++  }
++
++  outfile.close();
+   return 0;
+ 
+ }
+@@ -384,17 +386,17 @@ void process_configuration_sequence(const Automaton &automaton,
+                                     Output &output) {           //
+ 
+   std::vector<State> endpoints;
+-  std::string input_string_cpy = *input_string;
+-//  std::cout << "Current state ID:\t" << current_state.id << "\n"
+-//            << "Current input string:\t" << input_string << "\n\n";
+-//  for ( auto i : output.final_states ) std::cout << i << "\n";
++  std::string* input_string_cpy;
++  std::cout << "Current state ID:\t" << current_state.id << "\n"
++            << "Current input string:\t" << *input_string << "\n\n";
++  for ( auto i : output.final_states ) std::cout << i << "\n";
+ 
+   if ( input_string->empty() ) {
+     output.final_states.push_back( current_state.id );
+-//    std::cout <<  "Current output.final_states\t" << "\n";
+-//    for ( auto i : output.final_states ) std::cout << i << "\n";
++    std::cout <<  "Current output.final_states\t" << "\n";
++    for ( auto i : output.final_states ) std::cout << i << "\n";
+ 
+-//    std::cout << "\n";
++    std::cout << "\n";
+     if ( current_state.is_accept ) {
+       output.is_accept = true;
+     }
+@@ -414,10 +416,12 @@ void process_configuration_sequence(const Automaton &automaton,
+       }
+     }
+   }
+-  input_string->erase( input_string->begin() );
++  std::memcpy(input_string_cpy, input_string, sizeof(input_string));
++  input_string_cpy->erase(input_string_cpy->begin());
+   for ( auto &state : endpoints ) {
+-    process_configuration_sequence( automaton, state, input_string, output );
++    process_configuration_sequence( automaton, state, input_string_cpy, output );
+   }
++  input_string->erase( input_string->begin() );
+ 
+ }
+ 
