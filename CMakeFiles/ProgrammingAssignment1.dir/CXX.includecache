@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Jacob/Development/CDev/ComputerScience_Spring2020/ComplexityTheory/ProgrammingAssignment1/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+algorithm
+-
+regex
+-
+map
+-
+unordered_map
+-
+iterator
+-
+string
+-
+
